@@ -1,6 +1,9 @@
-all: html 
+ipynb=$(wildcard *.ipynb)
+html=$(addprefix result/,$(patsubst %.ipynb,%.html,$(ipynb)))
 
-html: results/test.html 
+all: $(html)
 
-results/%.html: %.ipynb
+result/%.html: %.ipynb
 	jupyter nbconvert --to html $< --output $@
+
+
