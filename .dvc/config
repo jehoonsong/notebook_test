@@ -1,0 +1,4 @@
+['remote "ntc-dvc"']
+url = gs://ntc-dvc/5293493d173a73059121e14fbfd16f329890702d
+[core]
+remote = ntc-dvc
